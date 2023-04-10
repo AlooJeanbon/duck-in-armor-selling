@@ -1,0 +1,26 @@
+{% extends '/Layouts/header_and_menu.html.twig' %}
+
+{% block title %}{{ parent() }}{% endblock %}
+
+{% block main_title %} Liste des produits {% endblock %}
+{% block corps %}
+    <p>
+        Liste des produits
+    </p>
+    <table>
+        <tr><th>Produit</th><th></th></tr>
+        {% for produit in produits %}
+            <tr>
+                <td>{'id' : produit.id}</td>
+                <td>{{ produit.libelle }}</td>
+                <td>{{ produit.prix }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+
+{% block barre_laterale %}
+
+    <p>truc<br />bidule</p>
+
+{% endblock %}
